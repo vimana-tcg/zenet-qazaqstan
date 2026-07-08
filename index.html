@@ -2,173 +2,538 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#111008">
-    <title>ZENET QAZAQSTAN — Купить серу комовую и гранулированную в Казахстане</title>
+    <title>ZENET QAZAQSTAN — Сера комовая и гранулированная</title>
     <meta name="description" content="Надёжный поставщик серы комовой и гранулированной с чистотой 99,98%. Прямые поставки по Казахстану и на экспорт.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { background: #111008; color: #e8e8e8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; line-height: 1.6; font-size: 16px; }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
-        
+        body {
+            background: #0a0a0a;
+            color: #e8e8e8;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+        }
+
         /* Header */
-        header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(17, 16, 8, 0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(232, 232, 232, 0.08); height: 70px; display: flex; align-items: center; }
-        nav { display: flex; align-items: center; justify-content: space-between; width: 100%; height: 100%; }
-        .logo { display: flex; align-items: center; gap: 0.75rem; font-size: 1rem; font-weight: bold; letter-spacing: 0.05em; text-decoration: none; color: #e8e8e8; }
-        .logo-mark { width: 32px; height: 32px; background: #f4b860; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #111008; font-size: 18px; }
-        .nav-links { display: none; gap: 2.5rem; list-style: none; }
-        .nav-links a { color: #999; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
-        .nav-links a:hover { color: #f4b860; }
-        @media (min-width: 1024px) { .nav-links { display: flex; position: absolute; left: 50%; transform: translateX(-50%); } }
-        .header-actions { display: flex; align-items: center; gap: 1.5rem; }
-        .phone-link { display: none; align-items: center; gap: 0.5rem; color: #e8e8e8; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
-        .phone-link:hover { color: #f4b860; }
-        @media (min-width: 768px) { .phone-link { display: flex; } }
-        .cta-btn { background: #f4b860; color: #111008; padding: 0.5rem 1.25rem; border: none; border-radius: 4px; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: background 0.3s; text-decoration: none; display: inline-block; }
-        .cta-btn:hover { background: #ffd700; }
-        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(232, 232, 232, 0.08);
+            height: 64px;
+            padding: 0 2rem;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+        }
+
+        .logo-mark {
+            width: 36px;
+            height: 36px;
+            background: #f4b860;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #111008;
+            font-size: 20px;
+        }
+
+        nav {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f4b860;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .phone-link {
+            display: flex;
+            align-items: center;
+            color: #e8e8e8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .phone-link:hover {
+            color: #f4b860;
+        }
+
+        .cta-btn {
+            background: #fff;
+            color: #111008;
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
         /* Hero */
-        .hero { margin-top: 70px; min-height: 100vh; display: flex; align-items: center; justify-content: flex-start; position: relative; overflow: hidden; padding: 4rem 1.5rem; }
-        .hero::before { content: ''; position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1578575494546-b6e8d1e2d4d1?w=2000&h=1200&fit=crop'); background-size: cover; background-position: center; background-attachment: fixed; z-index: -1; }
-        .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(17, 16, 8, 0.95) 0%, rgba(17, 16, 8, 0.85) 30%, rgba(17, 16, 8, 0.4) 70%, transparent); z-index: -1; }
-        .hero-content { max-width: 700px; position: relative; z-index: 1; }
-        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(244, 184, 96, 0.1); border: 1px solid rgba(244, 184, 96, 0.3); border-radius: 20px; padding: 0.5rem 1rem; margin-bottom: 2rem; font-size: 0.85rem; color: #999; }
-        .hero-badge::before { content: ''; width: 6px; height: 6px; background: #f4b860; border-radius: 50%; display: inline-block; }
-        .hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: bold; line-height: 1.1; margin-bottom: 1.5rem; color: #fff; }
-        .hero p { font-size: 1rem; line-height: 1.8; color: #bbb; margin-bottom: 2rem; max-width: 600px; }
-        .hero-buttons { display: flex; flex-direction: column; gap: 1rem; max-width: 400px; }
-        @media (min-width: 640px) { .hero-buttons { flex-direction: row; gap: 1.5rem; } }
-        
-        .btn-primary { background: #fff; color: #111008; padding: 1rem 1.75rem; border: none; border-radius: 4px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: background 0.3s; text-decoration: none; display: inline-block; text-align: center; }
-        .btn-primary:hover { background: #f0f0f0; }
-        .btn-secondary { background: transparent; color: #fff; padding: 1rem 1.75rem; border: 1px solid #fff; border-radius: 4px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; text-align: center; }
-        .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); border-color: #f4b860; color: #f4b860; }
-        
+        .hero {
+            margin-top: 64px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 4rem 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(135deg, rgba(244, 184, 96, 0.1) 0%, rgba(100, 149, 237, 0.05) 100%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.85) 40%, transparent 80%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(244, 184, 96, 0.1);
+            border: 1px solid rgba(244, 184, 96, 0.3);
+            border-radius: 24px;
+            padding: 0.6rem 1.2rem;
+            margin-bottom: 2rem;
+            font-size: 0.8rem;
+            color: #bbb;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #f4b860;
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #bbb;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 1.8rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: #111008;
+        }
+
+        .btn-primary:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #f4b860;
+            color: #f4b860;
+        }
+
         /* Stats */
-        .stats { background: #1a1a1a; border-top: 1px solid rgba(232, 232, 232, 0.08); border-bottom: 1px solid rgba(232, 232, 232, 0.08); padding: 3rem 1.5rem; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
-        .stat-item { text-align: center; }
-        .stat-number { font-size: 2.5rem; font-weight: bold; color: #f4b860; font-family: 'Monaco', 'Courier New', monospace; }
-        .stat-label { color: #999; font-size: 0.9rem; margin-top: 0.5rem; }
-        
-        /* Products */
-        .products { padding: 4rem 1.5rem; }
-        .section-title { font-size: 2rem; font-weight: bold; margin-bottom: 1rem; color: #fff; }
-        .section-subtitle { color: #999; margin-bottom: 2rem; max-width: 500px; }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .product-card { background: #1a1a1a; border: 1px solid rgba(232, 232, 232, 0.08); border-radius: 8px; padding: 2rem; transition: all 0.3s; }
-        .product-card:hover { border-color: #f4b860; background: #222; }
-        .product-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #fff; }
-        .product-card p { color: #999; margin-bottom: 1.5rem; }
-        .product-features { list-style: none; margin-bottom: 1.5rem; }
-        .product-features li { color: #bbb; padding-left: 1.5rem; margin-bottom: 0.75rem; position: relative; }
-        .product-features li::before { content: '✓'; position: absolute; left: 0; color: #f4b860; font-weight: bold; }
-        .product-link { color: #f4b860; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
-        .product-link:hover { color: #ffd700; }
-        
-        /* Logistics */
-        .logistics { padding: 4rem 1.5rem; background: #0f0e0b; }
-        .logistics-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-        .logistics-image { border-radius: 12px; overflow: hidden; aspect-ratio: 1 / 1; }
-        .logistics-image img { width: 100%; height: 100%; object-fit: cover; }
-        .logistics-info h2 { font-size: 2rem; font-weight: bold; margin-bottom: 1rem; color: #fff; }
-        .logistics-info p { color: #999; margin-bottom: 2rem; line-height: 1.8; }
-        .logistics-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-        .logistics-card { background: rgba(244, 184, 96, 0.05); border: 1px solid rgba(244, 184, 96, 0.1); border-radius: 8px; padding: 1.5rem; transition: all 0.3s; }
-        .logistics-card:hover { border-color: #f4b860; background: rgba(244, 184, 96, 0.08); }
-        .logistics-card-icon { font-size: 2rem; margin-bottom: 0.75rem; }
-        .logistics-card h3 { font-size: 1rem; font-weight: bold; margin-bottom: 0.75rem; color: #fff; }
-        .logistics-card p { font-size: 0.9rem; color: #999; line-height: 1.6; }
-        @media (max-width: 768px) { .logistics-content { grid-template-columns: 1fr; } .logistics-grid { grid-template-columns: 1fr; } .logistics-image { aspect-ratio: 16 / 9; } }
-        
-        /* Quality */
-        .quality { padding: 4rem 1.5rem; background: #1a1a1a; }
-        .quality-content { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: start; }
-        .quality-left { max-width: 450px; }
-        .quality-left p { color: #999; margin-bottom: 2rem; line-height: 1.8; }
-        .quality-stat { background: rgba(244, 184, 96, 0.08); border: 1px solid rgba(244, 184, 96, 0.2); border-radius: 8px; padding: 2rem; }
-        .quality-stat-number { font-size: 3rem; font-weight: bold; color: #f4b860; font-family: 'Monaco', monospace; line-height: 1; }
-        .quality-stat-label { color: #999; font-size: 0.9rem; margin-top: 1rem; }
-        .quality-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-        .quality-card { background: rgba(244, 184, 96, 0.05); border: 1px solid rgba(244, 184, 96, 0.1); border-radius: 8px; padding: 1.5rem; transition: all 0.3s; }
-        .quality-card:hover { border-color: #f4b860; background: rgba(244, 184, 96, 0.08); }
-        .quality-card-icon { font-size: 2rem; margin-bottom: 1rem; }
-        .quality-card h3 { font-size: 0.95rem; font-weight: bold; margin-bottom: 0.75rem; color: #fff; }
-        .quality-card p { font-size: 0.85rem; color: #999; line-height: 1.6; }
-        @media (max-width: 768px) { .quality-content { grid-template-columns: 1fr; } .quality-grid { grid-template-columns: 1fr; } }
-        
-        /* Contact */
-        .contact { padding: 4rem 1.5rem; background: #0f0e0b; }
-        .contact h2 { font-size: 2rem; font-weight: bold; margin-bottom: 2rem; }
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .contact-item { padding: 1.5rem; background: rgba(244, 184, 96, 0.05); border: 1px solid rgba(244, 184, 96, 0.1); border-radius: 8px; }
-        .contact-item h3 { color: #f4b860; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
-        .contact-item p { color: #bbb; line-height: 1.6; }
-        .contact-item a { color: #f4b860; text-decoration: none; }
-        .contact-item a:hover { text-decoration: underline; }
-        
+        .stats {
+            background: rgba(20, 20, 20, 0.5);
+            border-top: 1px solid rgba(232, 232, 232, 0.08);
+            border-bottom: 1px solid rgba(232, 232, 232, 0.08);
+            padding: 3rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .stat-icon {
+            font-size: 1.8rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stat-content h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-content p {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Section */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #999;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: #f4b860;
+            border-radius: 50%;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        section p {
+            font-size: 1rem;
+            color: #bbb;
+            line-height: 1.7;
+        }
+
+        /* Products Section */
+        .products {
+            background: rgba(20, 20, 20, 0.5);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid rgba(232, 232, 232, 0.08);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            border-color: rgba(244, 184, 96, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .product-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .product-card ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .product-card li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: #bbb;
+            font-size: 0.95rem;
+        }
+
+        .product-card li::before {
+            content: '✓';
+            color: #f4b860;
+            font-weight: 700;
+        }
+
+        /* Quality Section */
+        .quality {
+            background: rgba(10, 10, 10, 0.5);
+        }
+
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .quality-card {
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid rgba(232, 232, 232, 0.08);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .quality-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .quality-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #fff;
+        }
+
+        .quality-card p {
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        /* Logistics Section */
+        .logistics {
+            background: rgba(20, 20, 20, 0.5);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: rgba(10, 10, 10, 0.5);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                display: none;
+            }
+            .stats-grid {
+                gap: 1.5rem;
+            }
+        }
+
         /* Footer */
-        footer { background: rgba(26, 26, 26, 0.5); border-top: 1px solid rgba(232, 232, 232, 0.08); padding: 3rem 1.5rem; text-align: center; color: #666; font-size: 0.9rem; }
-        
-        @media (max-width: 640px) { .hero { padding: 3rem 1rem; } .hero h1 { font-size: 2rem; } .hero p { font-size: 0.95rem; } .hero-buttons { flex-direction: column; } .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+        footer {
+            background: rgba(10, 10, 10, 0.9);
+            border-top: 1px solid rgba(232, 232, 232, 0.08);
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Utilities */
+        .text-center { text-align: center; }
+        .mb-2 { margin-bottom: 2rem; }
+        .mt-3 { margin-top: 3rem; }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">
-                    <span class="logo-mark">S</span>
-                    <span>ZENET</span>
-                </a>
-                <ul class="nav-links">
-                    <li><a href="#products">Продукция</a></li>
-                    <li><a href="#logistics">Логистика</a></li>
-                    <li><a href="#quality">Качество</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-                <div class="header-actions">
-                    <a href="tel:+77473217699" class="phone-link">+7 (747) 321-76-99</a>
-                    <a href="#contact" class="cta-btn">Заявка</a>
+        <div class="header-content">
+            <a href="#" class="logo">
+                <div class="logo-mark">S</div>
+                <div>
+                    <div style="font-size: 0.9rem;">ZENET</div>
+                    <div style="font-size: 0.75rem; opacity: 0.7;">QAZAQSTAN</div>
                 </div>
+            </a>
+            <nav>
+                <a href="#products">Продукция</a>
+                <a href="#features">Характеристики</a>
+                <a href="#how-we-work">Как мы работаем</a>
+                <a href="#logistics">Логистика</a>
+                <a href="#quality">Качество</a>
+                <a href="#about">О компании</a>
             </nav>
+            <div class="header-actions">
+                <a href="tel:+77473217699" class="phone-link">
+                    <span>📞</span>
+                    <span>+7 (747) 321-76-99</span>
+                </a>
+                <a href="#contact" class="cta-btn">Оставить заявку</a>
+            </div>
         </div>
     </header>
 
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">ZENET QAZAQSTAN · Актобе, Казахстан</div>
+            <div class="hero-badge">
+                🏭 ZENET QAZAQSTAN · Актобе, Казахстан
+            </div>
             <h1>Сера комовая и гранулированная с прямой поставкой</h1>
-            <p>Надёжный поставщик качественных нефтепродуктов, минералов и химии. Стабильный объём, чистота 99,98% и прозрачная логистика по Казахстану и на экспорт.</p>
+            <p>Надёжный поставщик качественных нефтегазодобывающих и минеральных материалов. Стабильный объём, чистота 99,98% и прозрачная логистика по Казахстану и на экспорт.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Получить расценку</a>
-                <a href="#contact" class="btn-secondary">Оставить заявку</a>
+                <button class="btn btn-primary">Рассчитать стоимость →</button>
+                <button class="btn btn-secondary">Смотреть продукцию</button>
             </div>
         </div>
     </section>
 
     <!-- Stats -->
     <section class="stats">
-        <div class="container">
+        <div class="stats-container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number">99,98%</div>
-                    <div class="stat-label">Чистота серы</div>
+                    <div class="stat-icon">🧪</div>
+                    <div class="stat-content">
+                        <h3>99,98%</h3>
+                        <p>Чистота серы</p>
+                    </div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">4М+ т</div>
-                    <div class="stat-label">Хранилище Тенгиза</div>
+                    <div class="stat-icon">🚂</div>
+                    <div class="stat-content">
+                        <h3>4М+ тонн</h3>
+                        <p>Резервов в Тенгизе</p>
+                    </div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">20+</div>
-                    <div class="stat-label">Стран-партнёров</div>
+                    <div class="stat-icon">🌍</div>
+                    <div class="stat-content">
+                        <h3>20+ стран</h3>
+                        <p>Поставки на экспорт</p>
+                    </div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Приём заявок</div>
+                    <div class="stat-icon">⏰</div>
+                    <div class="stat-content">
+                        <h3>24/7</h3>
+                        <p>Поддержка клиентов</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -177,68 +542,31 @@
     <!-- Products -->
     <section class="products" id="products">
         <div class="container">
-            <h2 class="section-title">Наша продукция</h2>
-            <p class="section-subtitle">Два формата серы под все промышленные нужды</p>
+            <div class="section-header">
+                <div class="section-label">Продукция</div>
+                <h2>Две формы серы высочайшего качества</h2>
+                <p>Выбирай вариант в зависимости от твоих потребностей в логистике и обработке</p>
+            </div>
             <div class="products-grid">
                 <div class="product-card">
-                    <h3>Сера гранулированная</h3>
-                    <p>Гранулы размером 0,5–6 мм, минимальное пыление, идеальна для хранения и транспорта.</p>
-                    <ul class="product-features">
-                        <li>Чистота 99,98%</li>
-                        <li>Сниженный риск пыления</li>
-                        <li>Долгосрочная стабильность</li>
-                        <li>Просто использовать</li>
+                    <h3>🟨 Сера гранулированная</h3>
+                    <p>Размер: 0,5–6 мм. Минимальное пыление, удобна для погрузки и транспорта.</p>
+                    <ul>
+                        <li>Чистота 99,98% по ГОСТ</li>
+                        <li>Фракция 0,5–6 мм</li>
+                        <li>Низкое содержание пыли</li>
+                        <li>Удобна для автотранспорта</li>
                     </ul>
-                    <a href="#contact" class="product-link">Узнать подробнее →</a>
                 </div>
                 <div class="product-card">
-                    <h3>Сера комовая</h3>
-                    <p>Комовая форма (Lump Sulphur) — промышленный стандарт для производства серной кислоты.</p>
-                    <ul class="product-features">
-                        <li>Чистота 99,98%</li>
-                        <li>Универсальная фракция</li>
-                        <li>Гибкие сроки поставки</li>
-                        <li>Эффективная логистика</li>
+                    <h3>🪨 Сера комовая (Lump)</h3>
+                    <p>Промышленный стандарт. Крупные куски, идеальны для ж/д и морской логистики.</p>
+                    <ul>
+                        <li>Чистота 99,98% по ГОСТ</li>
+                        <li>Крупные куски (сертифицированные)</li>
+                        <li>Стандарт для экспорта</li>
+                        <li>Минимальные потери при перевозке</li>
                     </ul>
-                    <a href="#contact" class="product-link">Узнать подробнее →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Logistics -->
-    <section class="logistics" id="logistics">
-        <div class="container">
-            <div class="logistics-content">
-                <div class="logistics-image">
-                    <img src="https://images.unsplash.com/photo-1581092943956-3b8d30a0c5d7?w=800&h=800&fit=crop" alt="Ж/д терминал с вагонами серы">
-                </div>
-                <div class="logistics-info">
-                    <p style="color: #999; font-size: 0.9rem; margin-bottom: 1rem;">— ЛОГИСТИКА И ДОСТАВКА</p>
-                    <h2>Прозрачная логистика по РК и на экспорт</h2>
-                    <p>Организуем поставку удобным транспортом и берём на себя оформление документов. Вам остаётся получить продукт вовремя.</p>
-                    <div class="logistics-grid">
-                        <div class="logistics-card">
-                            <div class="logistics-card-icon">🚂</div>
-                            <h3>Железнодорожные перевозки</h3>
-                            <p>Отгрузка в полувагонах и хопперах по всей сети РК и в страны СНГ.</p>
-                        </div>
-                        <div class="logistics-card">
-                            <div class="logistics-card-icon">📍</div>
-                            <h3>Автодоставка</h3>
-                            <p>Гибкая логистика для средних партий с доставкой до склада клиента.</p>
-                        </div>
-                        <div class="logistics-card">
-                            <div class="logistics-card-icon">⛴️</div>
-                            <h3>Морской экспорт</h3>
-                            <p>Перевалка в портах и поставки на экспортные направления навалом.</p>
-                        </div>
-                        <div class="logistics-card">
-                            <div class="logistics-card-icon">🌍</div>
-                            <h3>География поставок</h3>
-                            <p>Казахстан и экспортные рынки. Подбираем маршрут под сроки и бюджет.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -247,37 +575,64 @@
     <!-- Quality -->
     <section class="quality" id="quality">
         <div class="container">
-            <div class="quality-content">
-                <div class="quality-left">
-                    <p style="color: #999; font-size: 0.9rem; margin-bottom: 1rem;">— КАЧЕСТВО</p>
-                    <h2 class="section-title">Сертификаты и контроль качества</h2>
-                    <p>Мы отвечаем за то, что поставляем. Чистота, документы и стабильность — то, за что нас ценят клиенты.</p>
-                    <div class="quality-stat">
-                        <div class="quality-stat-number">99,98%</div>
-                        <div class="quality-stat-label">Гарантированная массовая доля серы в каждой партии продукции.</div>
-                    </div>
+            <div class="section-header">
+                <div class="section-label">Качество</div>
+                <h2>Сертификаты и контроль качества</h2>
+                <p>Каждая партия проходит лабораторный контроль. Мы отвечаем за то, что поставляем.</p>
+            </div>
+            <div class="quality-grid">
+                <div class="quality-card">
+                    <div class="quality-card-icon">🧪</div>
+                    <h3>Лабораторный контроль</h3>
+                    <p>Каждая партия анализируется в аккредитованной лаборатории.</p>
                 </div>
-                <div class="quality-grid">
-                    <div class="quality-card">
-                        <div class="quality-card-icon">🧪</div>
-                        <h3>Лабораторный контроль</h3>
-                        <p>Каждая партия проверяется на массовую долю серы и соответствие фракции.</p>
-                    </div>
-                    <div class="quality-card">
-                        <div class="quality-card-icon">📋</div>
-                        <h3>Паспорт качества</h3>
-                        <p>Предоставляем сопроводительные документы и сертификаты на продукцию.</p>
-                    </div>
-                    <div class="quality-card">
-                        <div class="quality-card-icon">🛡️</div>
-                        <h3>Стабильное качество</h3>
-                        <p>Чистота 99,98% в каждой поставке — комовой и гранулированной серы.</p>
-                    </div>
-                    <div class="quality-card">
-                        <div class="quality-card-icon">🏆</div>
-                        <h3>Соответствие стандартам</h3>
-                        <p>Продукт отвечает требованиям промышленных и химических производств.</p>
-                    </div>
+                <div class="quality-card">
+                    <div class="quality-card-icon">📜</div>
+                    <h3>Сертификаты ГОСТ</h3>
+                    <p>Соответствие международным и казахстанским стандартам.</p>
+                </div>
+                <div class="quality-card">
+                    <div class="quality-card-icon">📋</div>
+                    <h3>Документы на экспорт</h3>
+                    <p>Полный пакет для таможни и импортёров.</p>
+                </div>
+                <div class="quality-card">
+                    <div class="quality-card-icon">✅</div>
+                    <h3>Гарантия стабильности</h3>
+                    <p>Чистота 99,98% в каждой партии — без компромиссов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logistics -->
+    <section class="logistics" id="logistics">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Логистика</div>
+                <h2>Гибкие маршруты доставки по РК и на экспорт</h2>
+                <p>Подбираем оптимальный способ доставки под сроки и бюджет клиента.</p>
+            </div>
+            <div class="quality-grid">
+                <div class="quality-card">
+                    <div class="quality-card-icon">🚂</div>
+                    <h3>Железнодорожные перевозки</h3>
+                    <p>Отгрузка в полувагонах и хопперах по всей РК и СНГ.</p>
+                </div>
+                <div class="quality-card">
+                    <div class="quality-card-icon">🚚</div>
+                    <h3>Автодоставка</h3>
+                    <p>Гибкая логистика для средних партий с доставкой до склада.</p>
+                </div>
+                <div class="quality-card">
+                    <div class="quality-card-icon">⛴️</div>
+                    <h3>Морской экспорт</h3>
+                    <p>Перевалка в портах и поставки на экспортные направления.</p>
+                </div>
+                <div class="quality-card">
+                    <div class="quality-card-icon">🌍</div>
+                    <h3>География поставок</h3>
+                    <p>Казахстан, Россия, СНГ и 20+ стран-партнёров глобально.</p>
                 </div>
             </div>
         </div>
@@ -286,20 +641,31 @@
     <!-- Contact -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2>Оставить заявку</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <h3>📞 Телефон</h3>
-                    <p><a href="tel:+77473217699">+7 (747) 321-76-99</a></p>
-                    <p><a href="tel:+77026005792">+7 (702) 600-57-92</a></p>
+            <div class="section-header text-center">
+                <div class="section-label" style="justify-content: center;">Связь</div>
+                <h2>Есть вопросы? Свяжись с нами</h2>
+            </div>
+            <div class="contact-grid" style="margin-top: 3rem;">
+                <div>
+                    <h3 style="margin-bottom: 1.5rem; color: #fff;">Контактная информация</h3>
+                    <p style="margin-bottom: 1.5rem;"><strong>Компания:</strong> ZENET QAZAQSTAN</p>
+                    <p style="margin-bottom: 1.5rem;"><strong>Адрес:</strong> Актобе, пр. Санкибай батыра, 14/4, офис 207</p>
+                    <p style="margin-bottom: 1.5rem;"><strong>Телефоны:</strong><br>
+                        +7 (747) 321-76-99<br>
+                        +7 (702) 600-57-92
+                    </p>
+                    <p style="margin-bottom: 1.5rem;"><strong>Email:</strong> zenet.qazaqstan@gmail.com</p>
+                    <p style="margin-bottom: 1.5rem;"><strong>Часы:</strong> Пн–Пт 09:00–18:00</p>
                 </div>
-                <div class="contact-item">
-                    <h3>📧 Email</h3>
-                    <p><a href="mailto:zenet.qazaqstan@gmail.com">zenet.qazaqstan@gmail.com</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>📍 Адрес</h3>
-                    <p>г. Актобе, пр. Санкибай батыра, 14/4, офис 207</p>
+                <div>
+                    <h3 style="margin-bottom: 1.5rem; color: #fff;">Отправить заявку</h3>
+                    <form style="display: flex; flex-direction: column; gap: 1rem;">
+                        <input type="text" placeholder="Ваше имя" required style="padding: 0.75rem; background: rgba(232, 232, 232, 0.08); border: 1px solid rgba(232, 232, 232, 0.15); border-radius: 6px; color: #fff;">
+                        <input type="email" placeholder="Email" required style="padding: 0.75rem; background: rgba(232, 232, 232, 0.08); border: 1px solid rgba(232, 232, 232, 0.15); border-radius: 6px; color: #fff;">
+                        <input type="tel" placeholder="Телефон" required style="padding: 0.75rem; background: rgba(232, 232, 232, 0.08); border: 1px solid rgba(232, 232, 232, 0.15); border-radius: 6px; color: #fff;">
+                        <textarea placeholder="Сообщение" rows="4" style="padding: 0.75rem; background: rgba(232, 232, 232, 0.08); border: 1px solid rgba(232, 232, 232, 0.15); border-radius: 6px; color: #fff; font-family: inherit;"></textarea>
+                        <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -307,7 +673,8 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 ZENET QAZAQSTAN. Все права защищены.</p>
+        <p>&copy; 2026 ZENET QAZAQSTAN. Все права защищены.</p>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">Надёжный поставщик серы комовой и гранулированной — Казахстан</p>
     </footer>
 </body>
 </html>
